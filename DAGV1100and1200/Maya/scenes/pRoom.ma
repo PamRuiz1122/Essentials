@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: pRoom.ma
-//Last modified: Fri, Jul 18, 2025 12:15:46 PM
+//Last modified: Fri, Jul 18, 2025 12:47:21 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "SOFA2" -rfn "SOFA2RN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/SOFA2.ma";
 file -r -ns "SOFA2" -dr 1 -rfn "SOFA2RN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/SOFA2.ma";
@@ -13,24 +13,24 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Mac OS X 15.5";
-fileInfo "UUID" "D7DF35BD-1346-A7F9-93F8-3D8F6541BF82";
+fileInfo "UUID" "D817EA28-DE47-DA04-0CCD-17B17A06A410";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "51D43B43-4BA3-DD07-397D-C885991BC07E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.5502193598144669 34.801472921809165 30.483569855336633 ;
-	setAttr ".r" -type "double3" -52.511406885717427 -25.871043405806002 -1.7674099624962845e-15 ;
-	setAttr ".rp" -type "double3" 1.7763568394002505e-15 2.6645352591003757e-15 0 ;
-	setAttr ".rpt" -type "double3" 5.9078561688223344e-15 1.7479671056273403e-14 7.1342200084394495e-15 ;
+	setAttr ".t" -type "double3" -12.331022020178088 18.72331684947504 34.763316323355589 ;
+	setAttr ".r" -type "double3" -17.503802295239009 -19.860492487959608 3.5930442524478427e-14 ;
+	setAttr ".rp" -type "double3" 6.106226635438361e-16 8.8817841970012523e-16 0 ;
+	setAttr ".rpt" -type "double3" 1.0225426848585087e-15 1.2873101797008731e-14 1.3790849494663123e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "791B3316-402F-9A6C-8905-B6BD921A7C94";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 42.401106280681226;
+	setAttr ".coi" 38.698240684730919;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 7.7099186370063881 1.157275405160199 7.2643734958825412 ;
+	setAttr ".tp" -type "double3" 0.20722866058349965 7.0840822160243917 0.052016735076882981 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "11526BD9-4DD7-B84C-4331-B69C0DBD0BC3";
