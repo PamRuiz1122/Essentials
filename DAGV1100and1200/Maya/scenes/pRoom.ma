@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: pRoom.ma
-//Last modified: Fri, Jul 18, 2025 11:39:49 AM
+//Last modified: Fri, Jul 18, 2025 12:15:46 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "SOFA2" -rfn "SOFA2RN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/SOFA2.ma";
 file -r -ns "SOFA2" -dr 1 -rfn "SOFA2RN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/SOFA2.ma";
@@ -13,24 +13,24 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Mac OS X 15.5";
-fileInfo "UUID" "4A185359-0F49-7BAD-FBF9-5592786AB3BB";
+fileInfo "UUID" "D7DF35BD-1346-A7F9-93F8-3D8F6541BF82";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "51D43B43-4BA3-DD07-397D-C885991BC07E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -27.630000427862889 6.9368609179459639 9.6615681927343626 ;
-	setAttr ".r" -type "double3" -1.1669201530163384 -75.059788933730573 -3.1535871473729888e-13 ;
-	setAttr ".rp" -type "double3" 0 -8.8817841970012523e-16 0 ;
-	setAttr ".rpt" -type "double3" 8.2857575826668977e-15 1.6416653601053045e-14 7.5002427086321216e-15 ;
+	setAttr ".t" -type "double3" -3.5502193598144669 34.801472921809165 30.483569855336633 ;
+	setAttr ".r" -type "double3" -52.511406885717427 -25.871043405806002 -1.7674099624962845e-15 ;
+	setAttr ".rp" -type "double3" 1.7763568394002505e-15 2.6645352591003757e-15 0 ;
+	setAttr ".rpt" -type "double3" 5.9078561688223344e-15 1.7479671056273403e-14 7.1342200084394495e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "791B3316-402F-9A6C-8905-B6BD921A7C94";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 29.961270211415929;
+	setAttr ".coi" 42.401106280681226;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 1.3124368010274132 6.3266939334210841 1.9388266986650571 ;
+	setAttr ".tp" -type "double3" 7.7099186370063881 1.157275405160199 7.2643734958825412 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "11526BD9-4DD7-B84C-4331-B69C0DBD0BC3";
@@ -5918,7 +5918,7 @@ createNode transform -n "group2";
 	setAttr ".sp" -type "double3" -9.9076805114746094 2.3989293575286865 3.1614986658096313 ;
 createNode transform -n "pasted__Chair2" -p "group2";
 	rename -uid "E08AF9FF-C44E-1EAA-76C3-838E3D844274";
-	setAttr ".t" -type "double3" 5.812331418319606 -0.13418450455026221 -6.4251641320249657 ;
+	setAttr ".t" -type "double3" 5.8199585143292101 0.159659734112161 -6.4422131106896563 ;
 	setAttr ".r" -type "double3" -176.68031131759571 -0.62758959825097416 -181.52325225412071 ;
 	setAttr ".rp" -type "double3" -10.388865768236194 2.445 2.3261785962704149 ;
 	setAttr ".rpt" -type "double3" 2.0605739337042905e-13 2.4980018054066022e-15 -8.4376949871511897e-14 ;
