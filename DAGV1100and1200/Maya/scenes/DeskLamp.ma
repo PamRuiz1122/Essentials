@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: DeskLamp.ma
-//Last modified: Sat, Jul 19, 2025 07:56:41 PM
+//Last modified: Sat, Jul 19, 2025 08:04:22 PM
 //Codeset: UTF-8
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,23 +11,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Mac OS X 15.5";
-fileInfo "UUID" "01A36E07-6643-CE6C-35E0-3FBCD169EB90";
+fileInfo "UUID" "669ADAC8-7646-3E23-919C-2C84EBE5E91C";
 createNode transform -s -n "persp";
 	rename -uid "8C8A1FAE-CE41-58B3-F27E-4B908D7A8167";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 30.265207821850762 4.2177749536904452 -4.3828101202130449 ;
-	setAttr ".r" -type "double3" 3.661072173352129 90.731535893765127 -1.3103885287629689e-11 ;
-	setAttr ".rp" -type "double3" 4.4408920985006262e-16 1.7763568394002505e-15 0 ;
-	setAttr ".rpt" -type "double3" 2.3767780816975575e-14 -2.8910384530418327e-15 2.7989014206062932e-15 ;
+	setAttr ".t" -type "double3" 9.8903414292359049 12.143150877830349 -4.1367221857113146 ;
+	setAttr ".r" -type "double3" 148.88088652643273 88.357561411273593 179.9999999999998 ;
+	setAttr ".rp" -type "double3" 8.8817841970012523e-16 -8.8817841970012523e-16 1.7763568394002505e-15 ;
+	setAttr ".rpt" -type "double3" 2.3351822976044017e-14 -1.3984203190252571e-15 5.1741127105475904e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5097AB21-2A45-5DBC-C93B-1CB45F83E7BA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 36.000043515112317;
+	setAttr ".coi" 16.57151883574652;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -5.6584397359055174 6.5165322023174168 -3.9241224836076083 ;
+	setAttr ".tp" -type "double3" -4.290619923575262 3.5786759983359246 -3.7300999137116513 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "BCBDA26D-3941-C080-AE40-C2B6B191056A";
@@ -127,11 +127,11 @@ createNode mesh -n "pSphereShape1" -p "pSphere1";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr -s 5 ".pt";
-	setAttr ".pt[319]" -type "float3" -0.0029756771 -0.04519356 -0.061196346 ;
-	setAttr ".pt[320]" -type "float3" -0.25368407 0.014939025 -0.061195605 ;
-	setAttr ".pt[321]" -type "float3" 0.0096009281 -0.045184977 0.018577425 ;
-	setAttr ".pt[322]" -type "float3" -0.22882806 0.014977471 0.096459098 ;
-	setAttr ".pt[461]" -type "float3" 0.25368381 -0.065365218 -0.061196346 ;
+	setAttr ".pt[319]" -type "float3" 1.7462298e-10 2.7939677e-09 1.0244548e-08 ;
+	setAttr ".pt[320]" -type "float3" 7.4505806e-09 -2.3283064e-10 1.0244548e-08 ;
+	setAttr ".pt[321]" -type "float3" 0 -2.7939677e-09 -1.8626451e-09 ;
+	setAttr ".pt[322]" -type "float3" -1.4901161e-08 6.9849193e-10 0 ;
+	setAttr ".pt[461]" -type "float3" -7.4505806e-09 0 1.0244548e-08 ;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "AB2EE5C7-0E46-FC41-F123-0C967C8107BD";
 	setAttr -s 2 ".lnk";
