@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Fruit.ma
-//Last modified: Wed, Jul 23, 2025 08:17:54 PM
+//Last modified: Wed, Jul 23, 2025 08:21:49 PM
 //Codeset: UTF-8
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Mac OS X 15.5";
-fileInfo "UUID" "CD7E2C7D-7F47-7E8F-657E-50B574A457C8";
+fileInfo "UUID" "2A097765-0845-91F0-8748-1DA3F152B04B";
 createNode transform -s -n "persp";
 	rename -uid "785DA7BF-ED4B-A295-ACDF-799AA7153030";
 	setAttr ".v" no;
@@ -8497,21 +8497,113 @@ createNode mesh -n "pasted__pasted__pTorus2Shape" -p "pasted__pasted__pTorus2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "snacksBowl:pCube1";
+	rename -uid "B0BB1A04-FF42-0717-577D-CA9CA41ADE48";
+	setAttr ".t" -type "double3" -1.6189166124215442 0 2.0761774637030057 ;
+	setAttr ".s" -type "double3" 1.5722852456863803 1.5722852456863803 1.5722852456863803 ;
+	setAttr ".rp" -type "double3" 0 0.61762632068257317 0 ;
+	setAttr ".sp" -type "double3" 0 0.61762632068257317 0 ;
+createNode mesh -n "snacksBowl:pCubeShape1" -p "snacksBowl:pCube1";
+	rename -uid "EE9B41AD-0F4C-8DC7-54C2-90B406A3BFFB";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.70470351817315069 0.63920961241973062 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dr" 3;
+	setAttr ".dsm" 2;
+createNode mesh -n "snacksBowl:polySurfaceShape1" -p "snacksBowl:pCube1";
+	rename -uid "E0E4068B-B448-4C0E-76DC-199A409483FD";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "f[1]" "f[6:13]";
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 22 ".uvst[0].uvsp[0:21]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.375 0.25
+		 0.625 0.25 0.625 0.5 0.375 0.5;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 16 ".vt[0:15]"  -0.69397384 0.1923528 0.69397384 0.69397384 0.1923528 0.69397384
+		 -0.69397384 1.042899847 0.69397384 0.69397384 1.042899847 0.69397384 -0.69397384 1.042899847 -0.69397384
+		 0.69397384 1.042899847 -0.69397384 -0.69397384 0.1923528 -0.69397384 0.69397384 0.1923528 -0.69397384
+		 -0.49194142 1.042965293 0.49194142 0.49194142 1.042965293 0.49194142 0.49194142 1.042965293 -0.49194142
+		 -0.49194142 1.042965293 -0.49194142 -0.49194142 0.28375554 0.49194142 0.49194142 0.28375554 0.49194142
+		 0.49194142 0.28375554 -0.49194142 -0.49194142 0.28375554 -0.49194142;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0 2 8 0 3 9 0 8 9 0 5 10 0 9 10 0 4 11 0 11 10 0 8 11 0
+		 8 12 0 9 13 0 12 13 0 10 14 0 13 14 0 11 15 0 15 14 0 12 15 0;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 22 24 -27 -28
+		mu 0 4 18 19 20 21
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13
+		f 4 1 13 -15 -13
+		mu 0 4 2 3 15 14
+		f 4 7 15 -17 -14
+		mu 0 4 3 5 16 15
+		f 4 -3 17 18 -16
+		mu 0 4 5 4 17 16
+		f 4 -7 12 19 -18
+		mu 0 4 4 2 14 17
+		f 4 14 21 -23 -21
+		mu 0 4 14 15 19 18
+		f 4 16 23 -25 -22
+		mu 0 4 15 16 20 19
+		f 4 -19 25 26 -24
+		mu 0 4 16 17 21 20
+		f 4 -20 20 27 -26
+		mu 0 4 17 14 18 21;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".dr" 3;
+	setAttr ".dsm" 2;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "6950ADB5-6D47-89D6-2F05-338646A82125";
+	rename -uid "9FB941BA-0746-07FC-4DEC-A3A47D8C2F13";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "8A3C445C-CD43-DF5F-B18E-05A9A29CB804";
+	rename -uid "FCF36567-C245-77E2-68B4-F1B39555FD6C";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "285DE2DA-0148-E0A0-E945-178F5A14A114";
+	rename -uid "4FADEB3D-1E49-0004-F443-B697BEC34B15";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7DE74FE1-494D-79E9-AEEC-D3AD77D5F978";
+	rename -uid "E8D8108B-EF44-B80E-75AC-03AD6D2AD8CC";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C8143E74-8443-270C-0E64-A4A3B17A8E44";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7FB87D48-A34B-140C-B0C8-9C8BBD1747E3";
+	rename -uid "0CC59891-AC4E-B2A3-EC33-E3921CE7EA04";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F71B5E16-EF44-1BBB-6F07-0EBFCFE238F9";
 	setAttr ".g" yes;
@@ -8603,6 +8695,69 @@ createNode groupId -n "groupId8";
 createNode groupId -n "groupId9";
 	rename -uid "31BA20B3-D449-3835-4DA6-B9B7C5D1E9C5";
 	setAttr ".ihi" 0;
+createNode polyAutoProj -n "snacksBowl:polyAutoProj1";
+	rename -uid "623AF9E8-A24E-774A-F5BF-2487EC92B24F";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:13]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 1.387947678565979 1.387947678565979 1.387947678565979 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyPlanarProj -n "snacksBowl:polyPlanarProj1";
+	rename -uid "4DD74426-944D-96F6-607B-109E2C22087A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:13]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 1.4901161193847656e-08 0.6176263689994812 1.4901161193847656e-08 ;
+	setAttr ".ro" -type "double3" -33.772955241985322 59.346361624919517 -2.0227046513581007e-06 ;
+	setAttr ".ps" -type "double2" 1.9016439137537879 1.76414476075011 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" 0.99136918783187866 -1.2101701498031616 -0.71510708332061768 -0.71509277820587158
+		 -5.3969174072895676e-17 2.1035120487213135 -0.55591440200805664 -0.55590331554412842
+		 -1.672737717628479 -0.71722269058227539 -0.42381724715232849 -0.42380878329277039
+		 1.7539981342080523e-15 -0.366874098777771 6.1150007247924805 6.3148765563964844;
+	setAttr ".prgt" 1278;
+	setAttr ".ptop" 982;
+createNode polyAutoProj -n "snacksBowl:polyAutoProj2";
+	rename -uid "4E7FFE47-3E48-5289-4528-429135644B4F";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:13]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 1.387947678565979 1.387947678565979 1.387947678565979 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapCut -n "snacksBowl:polyMapCut1";
+	rename -uid "ECB750A7-EA41-D077-BA63-2CACF262ABBA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:27]";
+createNode polyTweakUV -n "snacksBowl:polyTweakUV1";
+	rename -uid "DFCC175A-3643-CE3B-E681-18BC54227CE6";
+	setAttr ".uopa" yes;
+	setAttr -s 56 ".uvtk[0:55]" -type "float2" -0.085556135 0.33741319 -0.085556135
+		 0.6176008 -0.25725767 0.6176008 -0.25725767 0.33741319 -0.072738901 -0.058354095
+		 -0.072738901 0.22183354 -0.24444047 0.22183354 -0.24444047 -0.058354095 0.47318655
+		 0.091260903 0.47318655 -0.10735746 0.6264497 -0.10735746 0.6264497 0.091260903 0.21300097
+		 -0.022794448 0.21300097 -0.22141273 0.36626416 -0.22141273 0.36626416 -0.022794448
+		 0.51368284 0.27762765 0.31506449 0.27762765 0.31506449 0.079009227 0.51368284 0.079009227
+		 0.20138304 0.56180668 -0.078804538 0.56180668 -0.078804538 0.28161907 0.20138304
+		 0.28161907 0.27468258 0.35672981 -0.023623869 0.22182865 0.017160878 0.18104391 0.23389795
+		 0.31594509 -0.035816565 0.036991052 0.0049680322 0.077775709 0.31257206 -0.058360055
+		 0.27178741 -0.017575435 0.68252611 0.28161907 0.68252611 0.56180668 0.51082456 0.56180668
+		 0.51082456 0.28161907 0.41381902 0.33741319 0.41381902 0.6176008 0.2421174 0.6176008
+		 0.2421174 0.33741319 0.64752436 0.13480341 0.64752436 0.33342177 0.49426112 0.33342177
+		 0.49426112 0.13480341 0.37292904 0.075017802 0.37292904 -0.12360044 0.52619219 -0.12360044
+		 0.52619219 0.075017802 0.20358633 0.077775709 0.017160878 -0.017574362 0.035279587
+		 0.31594509 0.27178741 0.18104286 0.244371 0.036991052 -0.023623869 -0.058358982 -0.0055050105
+		 0.35672981 0.31257206 0.22182755;
+createNode file -n "snacksBowl:file1";
+	rename -uid "E8E1DCA3-7648-94F2-DA7B-4D9919559C3E";
+	setAttr ".ftn" -type "string" "/Users/pamelaruiz/Documents/colors2.jpg";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "snacksBowl:place2dTexture1";
+	rename -uid "65B96FF7-C849-7D08-BCAA-B3973B580EF5";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -8621,20 +8776,23 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
+	setAttr -s 2 ".u";
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
+	setAttr -s 2 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :openPBR_shader1;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 7 ".dsm";
+	setAttr -s 8 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 3 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
+	setAttr -s 2 ".t";
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -8663,6 +8821,9 @@ connectAttr "groupId9.id" "pasted__pasted__pTorus2Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pasted__pasted__pTorus2Shape.iog.og[0].gco"
 		;
 connectAttr "pasted__pasted__groupId6.id" "pasted__pasted__pTorus2Shape.ciog.cog[0].cgid"
+		;
+connectAttr "snacksBowl:polyTweakUV1.out" "snacksBowl:pCubeShape1.i";
+connectAttr "snacksBowl:polyTweakUV1.uvtk[0]" "snacksBowl:pCubeShape1.uvst[0].uvtw"
 		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -8698,9 +8859,41 @@ connectAttr "place2dTexture1.vt3" "file1.vt3";
 connectAttr "place2dTexture1.vc1" "file1.vc1";
 connectAttr "place2dTexture1.o" "file1.uv";
 connectAttr "place2dTexture1.ofs" "file1.fs";
+connectAttr "snacksBowl:polySurfaceShape1.o" "snacksBowl:polyAutoProj1.ip";
+connectAttr "snacksBowl:pCubeShape1.wm" "snacksBowl:polyAutoProj1.mp";
+connectAttr "snacksBowl:polyAutoProj1.out" "snacksBowl:polyPlanarProj1.ip";
+connectAttr "snacksBowl:pCubeShape1.wm" "snacksBowl:polyPlanarProj1.mp";
+connectAttr "snacksBowl:polyPlanarProj1.out" "snacksBowl:polyAutoProj2.ip";
+connectAttr "snacksBowl:pCubeShape1.wm" "snacksBowl:polyAutoProj2.mp";
+connectAttr "snacksBowl:polyAutoProj2.out" "snacksBowl:polyMapCut1.ip";
+connectAttr "snacksBowl:polyMapCut1.out" "snacksBowl:polyTweakUV1.ip";
+connectAttr ":defaultColorMgtGlobals.cme" "snacksBowl:file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "snacksBowl:file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "snacksBowl:file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "snacksBowl:file1.ws";
+connectAttr "snacksBowl:place2dTexture1.c" "snacksBowl:file1.c";
+connectAttr "snacksBowl:place2dTexture1.tf" "snacksBowl:file1.tf";
+connectAttr "snacksBowl:place2dTexture1.rf" "snacksBowl:file1.rf";
+connectAttr "snacksBowl:place2dTexture1.mu" "snacksBowl:file1.mu";
+connectAttr "snacksBowl:place2dTexture1.mv" "snacksBowl:file1.mv";
+connectAttr "snacksBowl:place2dTexture1.s" "snacksBowl:file1.s";
+connectAttr "snacksBowl:place2dTexture1.wu" "snacksBowl:file1.wu";
+connectAttr "snacksBowl:place2dTexture1.wv" "snacksBowl:file1.wv";
+connectAttr "snacksBowl:place2dTexture1.re" "snacksBowl:file1.re";
+connectAttr "snacksBowl:place2dTexture1.of" "snacksBowl:file1.of";
+connectAttr "snacksBowl:place2dTexture1.r" "snacksBowl:file1.ro";
+connectAttr "snacksBowl:place2dTexture1.n" "snacksBowl:file1.n";
+connectAttr "snacksBowl:place2dTexture1.vt1" "snacksBowl:file1.vt1";
+connectAttr "snacksBowl:place2dTexture1.vt2" "snacksBowl:file1.vt2";
+connectAttr "snacksBowl:place2dTexture1.vt3" "snacksBowl:file1.vt3";
+connectAttr "snacksBowl:place2dTexture1.vc1" "snacksBowl:file1.vc1";
+connectAttr "snacksBowl:place2dTexture1.o" "snacksBowl:file1.uv";
+connectAttr "snacksBowl:place2dTexture1.ofs" "snacksBowl:file1.fs";
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "snacksBowl:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "snacksBowl:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file1.oc" ":openPBR_shader1.bc";
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pTorus2Shape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
@@ -8711,8 +8904,10 @@ connectAttr "pTorus2Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pasted__pTorus2Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pasted__pasted__pTorus2Shape.iog.og[0]" ":initialShadingGroup.dsm" 
 		-na;
+connectAttr "snacksBowl:pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId7.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId8.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId9.msg" ":initialShadingGroup.gn" -na;
 connectAttr "file1.msg" ":initialMaterialInfo.t" -na;
+connectAttr "snacksBowl:file1.msg" ":initialMaterialInfo.t" -na;
 // End of Fruit.ma
