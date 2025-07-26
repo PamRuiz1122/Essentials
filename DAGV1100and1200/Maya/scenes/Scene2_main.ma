@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene2_main.ma
-//Last modified: Fri, Jul 25, 2025 11:42:57 PM
+//Last modified: Fri, Jul 25, 2025 11:58:26 PM
 //Codeset: UTF-8
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Mac OS X 15.5";
-fileInfo "UUID" "79659079-5B43-4968-8632-9E8D9AED2FCF";
+fileInfo "UUID" "5BFD0F77-2843-EA1F-169D-2797D4D97930";
 createNode transform -s -n "persp";
 	rename -uid "3B50A7AA-E140-2748-FAD9-DC870D7C3D44";
 	setAttr ".v" no;
@@ -15121,7 +15121,7 @@ createNode polyTweakUV -n "polyTweakUV1";
 		 -0.4507187 0.12169114 -0.33741295 0.39074963 -0.33741295 0.39074963 -0.33741295 0.39074963
 		 -0.33741295 0.39074963;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "56C39EEB-9A4D-94AA-DF8B-3E93DD1B78E1";
+	rename -uid "41790484-EB46-3FC6-1FD3-E5954136041F";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -44.047617297323995 -497.71097518983527 ;
 	setAttr ".tgi[0].vh" -type "double2" 249.11923129330307 58.425278359766274 ;
