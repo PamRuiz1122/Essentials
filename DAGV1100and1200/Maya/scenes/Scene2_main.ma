@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene2_main.ma
-//Last modified: Fri, Jul 25, 2025 11:33:06 PM
+//Last modified: Fri, Jul 25, 2025 11:42:57 PM
 //Codeset: UTF-8
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,23 +11,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Mac OS X 15.5";
-fileInfo "UUID" "F5759F1E-3640-7164-F7A5-E3B1B50ECE8C";
+fileInfo "UUID" "79659079-5B43-4968-8632-9E8D9AED2FCF";
 createNode transform -s -n "persp";
 	rename -uid "3B50A7AA-E140-2748-FAD9-DC870D7C3D44";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -16.203272669017327 10.164637109530583 11.678656560385766 ;
-	setAttr ".r" -type "double3" -14.25982692846797 -49.423444637561339 2.0781116575962501e-14 ;
-	setAttr ".rp" -type "double3" -2.4424906541753444e-15 -8.8817841970012523e-16 -3.5527136788005009e-15 ;
-	setAttr ".rpt" -type "double3" 3.4719876866577035e-15 1.6657632418901561e-14 -2.8642673968160375e-15 ;
+	setAttr ".t" -type "double3" -9.1335618539189554 15.028931434308921 31.008436031448397 ;
+	setAttr ".r" -type "double3" -17.760587387515947 -13.670878221398885 3.1505406753948298e-14 ;
+	setAttr ".rp" -type "double3" -1.7763568394002505e-15 2.6645352591003757e-15 0 ;
+	setAttr ".rpt" -type "double3" -2.4271603208361501e-17 1.628340101469594e-14 5.3232187251722083e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "99199DC3-7C41-DB92-C1FA-7687C2D340CA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 29.898128716063709;
+	setAttr ".coi" 41.703951883010291;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 5.8057915585267708 2.8001442640777316 -7.1697767347034027 ;
+	setAttr ".tp" -type "double3" 0.25316386677274139 2.3075461888066098 -7.5826943010575221 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "7D1770E7-3F4F-DB77-CFE9-4080BDCA9AD3";
@@ -14494,7 +14494,7 @@ createNode mesh -n "Chair:ChairMeshShape" -p "Chair:ChairMesh";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.43490495532751083 0.60043516755104065 ;
+	setAttr ".pv" -type "double2" 0.47587063163518906 0.60043516755104065 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -15121,7 +15121,7 @@ createNode polyTweakUV -n "polyTweakUV1";
 		 -0.4507187 0.12169114 -0.33741295 0.39074963 -0.33741295 0.39074963 -0.33741295 0.39074963
 		 -0.33741295 0.39074963;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "8B4538C6-8840-E646-3400-EF8E02EE0BAF";
+	rename -uid "56C39EEB-9A4D-94AA-DF8B-3E93DD1B78E1";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -44.047617297323995 -497.71097518983527 ;
 	setAttr ".tgi[0].vh" -type "double2" 249.11923129330307 58.425278359766274 ;
