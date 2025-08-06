@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: whitedesk.ma
-//Last modified: Fri, Jul 25, 2025 11:07:54 PM
+//Last modified: Wed, Aug 06, 2025 04:39:24 PM
 //Codeset: UTF-8
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,23 +11,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Mac OS X 15.5";
-fileInfo "UUID" "C61172C9-9949-05A5-5472-F7BA23EB4A7B";
+fileInfo "UUID" "BF9E7130-8C43-A014-1983-5A913BDEDF9F";
 createNode transform -s -n "persp";
 	rename -uid "4205258E-F844-9C30-34BF-2788522D09A3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.1885030075433631 1.2452086992112146 3.4542465857872124 ;
-	setAttr ".r" -type "double3" -17.503802295239183 37.586031360581977 -4.0136303239412939e-14 ;
-	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -8.3266726846886741e-17 4.4408920985006262e-16 ;
-	setAttr ".rpt" -type "double3" 7.8850082134543791e-16 -3.4998208309681424e-16 -6.6719378683747311e-16 ;
+	setAttr ".t" -type "double3" 0.70829898858274942 0.89018623363841598 3.9039256819494996 ;
+	setAttr ".r" -type "double3" -14.003041836191503 31.168904055116716 -9.4787111151460362e-14 ;
+	setAttr ".rp" -type "double3" -4.4408920985006262e-16 6.2450045135165055e-17 4.4408920985006262e-16 ;
+	setAttr ".rpt" -type "double3" 8.1962756943015372e-16 -4.0989001928387038e-16 -5.1677133590902579e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "592CA08C-6F40-A222-A940-2FAB8733D0B6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 3.5815381253623046;
+	setAttr ".coi" 3.5711185572259048;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.89491129857002294 0.16799273662123526 0.74751314075662378 ;
+	setAttr ".tp" -type "double3" -1.0850532985552663 0.026070504853177856 0.93911888702237745 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "CE8E930F-6E4F-8426-E62D-49A9D31D7CAC";
@@ -1286,20 +1286,20 @@ createNode mesh -n "pCylinder2Shape" -p "pCylinder2";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "43DA3904-694E-089D-7172-55A7A886114E";
+	rename -uid "F24FEE9B-B245-CE89-9AC1-EABA200B9993";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D6987EFC-7A45-0C3D-816C-B0829A14E7C6";
+	rename -uid "4C9B0459-A246-4D45-14F1-B1ABBADA6DF9";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "853F3800-EC4C-9788-3B0E-01B6FDA9BE4E";
+	rename -uid "72612D18-F141-1BFC-E289-8BA5F8C0D8B1";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "B62A322E-D745-9E14-72CB-F893A0EE958C";
+	rename -uid "EDBE2A04-8C4F-6A1E-D201-3281C2872FDC";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "CFFD49E8-1B4F-8503-6B62-629ACD033B9E";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "72F6DDE6-1E46-E303-8DC6-CBBBC2C6F30E";
+	rename -uid "9515D965-2446-080E-510B-92861AE221A5";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "DC1E60F4-214B-CF0D-8425-DB8E883C1E8F";
 	setAttr ".g" yes;
@@ -1427,7 +1427,6 @@ select -ne :initialShadingGroup;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
-	setAttr -s 2 ".t";
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -1521,4 +1520,5 @@ connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file2.oc" ":openPBR_shader1.bc";
 connectAttr "pCylinder2Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
+connectAttr "file2.msg" ":initialMaterialInfo.t" -na;
 // End of whitedesk.ma
