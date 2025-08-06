@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene2_main.ma
-//Last modified: Wed, Aug 06, 2025 02:33:48 PM
+//Last modified: Wed, Aug 06, 2025 02:57:03 PM
 //Codeset: UTF-8
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,23 +11,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Mac OS X 15.5";
-fileInfo "UUID" "B1FAF69E-A54D-B0C5-1086-0CB0579D8A74";
+fileInfo "UUID" "0A0A2419-D34D-D324-7DAB-E1AFA0EAAE39";
 createNode transform -s -n "persp";
 	rename -uid "3B50A7AA-E140-2748-FAD9-DC870D7C3D44";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -11.245162708468497 12.630807076902535 24.264952112924572 ;
-	setAttr ".r" -type "double3" -7.0015209181021367 -41.617970565105487 6.6475179060583888e-14 ;
-	setAttr ".rp" -type "double3" -1.7763568394002505e-15 3.5527136788005009e-15 -3.5527136788005009e-15 ;
-	setAttr ".rpt" -type "double3" 5.310671381972226e-14 3.7107662174253284e-15 2.4604027661699545e-14 ;
+	setAttr ".t" -type "double3" -36.204478612188311 13.165923270377897 15.072343571289224 ;
+	setAttr ".r" -type "double3" -11.522053312386216 -64.331490778139141 -2.5699151512351348e-14 ;
+	setAttr ".rp" -type "double3" 1.3322676295501878e-15 -1.7763568394002505e-15 -7.1054273576010019e-15 ;
+	setAttr ".rpt" -type "double3" 6.5151084812086535e-14 -4.8857229666940247e-15 3.2333831339670358e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "99199DC3-7C41-DB92-C1FA-7687C2D340CA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 54.770850432661348;
+	setAttr ".coi" 42.070854759761254;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 24.860221235217665 5.9544764426006385 -16.375839176830773 ;
+	setAttr ".tp" -type "double3" 0.95047386446066184 4.7624763681121269 -2.7839832300349183 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "7D1770E7-3F4F-DB77-CFE9-4080BDCA9AD3";
@@ -14488,7 +14488,7 @@ createNode mesh -n "whitedesk:pCylinder2Shape" -p "whitedesk:pCylinder2";
 	setAttr ".dfgi" 107;
 createNode transform -n "Chair:ChairMesh";
 	rename -uid "572FA646-6044-3763-EC8E-17AD28CF1640";
-	setAttr ".t" -type "double3" 0.75124997345863154 -0.15020193028232764 -2.8850581930051828 ;
+	setAttr ".t" -type "double3" 0.75124997345863154 0.068876576180502788 -2.8850581930051828 ;
 	setAttr ".r" -type "double3" 0 -116.90066659587345 0 ;
 	setAttr ".s" -type "double3" 1 1.2109139322421945 1 ;
 	setAttr ".sp" -type "double3" -7.7271522513910895e-14 -8.9372953482325102e-15 1.0658141036401503e-14 ;
